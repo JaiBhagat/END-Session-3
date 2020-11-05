@@ -40,77 +40,77 @@ def test_readme_file_for_formatting():
     assert content.count("#") >= 10
 
 def test_function_name_had_cap_letter():
-    functions = inspect.getmembers(session7, inspect.isfunction)
+    functions = inspect.getmembers(session3, inspect.isfunction)
     for function in functions:
         assert len(re.findall('([A-Z])', function[0])) == 0, "You have used Capital letter(s) in your function names"
 
 
 def test_fibonnaci_positive():
-    assert True== session7.is_fibonnaci(2), "Fibonnaci function not working proper"
+    assert True== session3.is_fibonnaci(2), "Fibonnaci function not working proper"
 
 def test_fibonnaci_negative():
-    assert False== session7.is_fibonnaci(123435),"passed number is not a Fibonnaci"
+    assert False== session3.is_fibonnaci(123435),"passed number is not a Fibonnaci"
 
 def test_evenodd_sum_1():
     l1 = [1,2,3,4]
     l2 = [1,2,3,4]
-    assert []== session7.evenodd_sum(l1,l2)
+    assert []== session3.evenodd_sum(l1,l2)
 
 
 def test_evenodd_sum_2():
     l1 = [1,2,3,4]
     l2 = [3,5,7,8]
-    assert [7]== session7.evenodd_sum(l1,l2)
+    assert [7]== session3.evenodd_sum(l1,l2)
 
 def test_vowel_removal():
     l1 = [1,2,3,4]
     l2 = [3,5,7,8]
-    assert 'whtspp'== session7.vowel_removal("whatsapp")
+    assert 'whtspp'== session3.vowel_removal("whatsapp")
 
 def test_relu_1():
     relu_list = [12,1,1.00,2,-5,8,-23.00,78]
-    assert [12, 1, 1.0, 2, 0, 8, 0, 78] == session7.relu(relu_list)
+    assert [12, 1, 1.0, 2, 0, 8, 0, 78] == session3.relu(relu_list)
 
 def test_sigmoid_2():
     list1 = [1.51,1.71,-6.36]
-    assert [0.819061206847858,0.8468362842349139,0.0017263811657371527] == session7.sigmoid(list1)
+    assert [0.819061206847858,0.8468362842349139,0.0017263811657371527] == session3.sigmoid(list1)
 
 
 def test_magic_shifting():
-    assert 'abcde' == session7.magic_shifting('vwxyz')
+    assert 'abcde' == session3.magic_shifting('vwxyz')
 
 def test_foul_words_detector_positive():
     text = """In comparison, the second and third most popular swearwords – 
     "shit" and ass – accounted for 15.0% and 14.5% respectively, 
     while other highlights included "bitch" (10.3%), "hell" (4.5%), "whore" (1.8%),
     "dick" (1.7%), "piss" (1.5%) and "pussy" (1.2%)"""
-    assert True == session7.foul_words_detector(text)
+    assert True == session3.foul_words_detector(text)
 
 def test_foul_words_detector_negative():
     text = """In comparison, the second and third most popular swearwords – """
-    assert False == session7.foul_words_detector(text)
+    assert False == session3.foul_words_detector(text)
 
 def test_even_number_sum():
     li = [5, 8, 10, 21, 50, 99] 
-    assert 68 == session7.even_number_sum(li)
+    assert 68 == session3.even_number_sum(li)
 
 def test_biggest_accii_char():
     li = 'TSAItsai'
-    assert 't' == session7.biggest_accii_char(li)
+    assert 't' == session3.biggest_accii_char(li)
     
 def test_correct_numberplate():
-    assert  bool(re.match(r"^[A-Z]{2}\d{2}\D{2}\d{4}$",session7.numberplate()[0]))
+    assert  bool(re.match(r"^[A-Z]{2}\d{2}\D{2}\d{4}$",session3.numberplate()[0]))
     
 def test_partial_function():
     assert  bool(re.match(r"^[A-Z]{2}\d{2}\D{2}\d{4}$",session7.veh_number(state='DL')[0]))
     
 class vehicle_number(unittest.TestCase):
    def test_partial_function_negative(self):
-      self.assertRaises(TypeError, session7.veh_number, 2000, 5000)
+      self.assertRaises(TypeError, session3.veh_number, 2000, 5000)
 
 if __name__ == '__main__':
    unittest.main()
 
 def test_sum_thirdplaces():
     li = [5, 8, 1, 21, 50, 99, 21, 45, 5, 68, 23] 
-    assert 105 == session7.sum_thirdplaces(li)
+    assert 105 == session3.sum_thirdplaces(li)
