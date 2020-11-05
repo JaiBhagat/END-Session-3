@@ -102,7 +102,7 @@ def test_correct_numberplate():
     assert  bool(re.match(r"^[A-Z]{2}\d{2}\D{2}\d{4}$",session3.numberplate()[0]))
     
 def test_partial_function():
-    assert  bool(re.match(r"^[A-Z]{2}\d{2}\D{2}\d{4}$",session7.veh_number(state='DL')[0]))
+    assert  bool(re.match(r"^[A-Z]{2}\d{2}\D{2}\d{4}$",session3.veh_number(state='DL')[0]))
     
 class vehicle_number(unittest.TestCase):
    def test_partial_function_negative(self):
